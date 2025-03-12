@@ -1,0 +1,27 @@
+{
+  "name": "da-qing-system",
+  "version": "1.0.0",
+  "description": "大清政务系统 - 用于处理皇帝和大臣们的奏章",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "大清",
+    "政务系统",
+    "奏章处理"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vueuse/core": "^13.0.0",
+    "ant-design-vue": "^4.2.6",
+    "pinia": "^3.0.1",
+    "vite": "^6.2.1",
+    "vue": "^3.3.13",
+    "vue-router": "^4.5.0"
+  }
+}
