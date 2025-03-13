@@ -155,7 +155,7 @@ const columns = [
 ]
 
 // 模拟数据
-const memorials = ref([
+const memorials = ref(JSON.parse(localStorage.getItem('memorials')) || [
   {
     id: 1,
     title: '关于修建水利工程的奏章',
@@ -324,6 +324,8 @@ const handleReplySubmit = () => {
       memorials.value[memorialIndex] = updatedMemorial
       // 更新当前查看的奏章信息
       currentMemorial.value = updatedMemorial
+      // 保存到本地存储
+      localStorage.setItem('memorials', JSON.stringify(memorials.value))
       message.success('批复成功')
       replyModalVisible.value = false
       submitLoading.value = false

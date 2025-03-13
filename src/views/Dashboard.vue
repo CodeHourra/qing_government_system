@@ -35,7 +35,13 @@
         <div class="header-right">
           <a-dropdown>
             <a class="user-dropdown" @click.prevent>
-              <UserOutlined />
+              <img
+                v-if="userRole === 'emperor'"
+                src="../assets/images/emperor-avatar.svg"
+                alt="皇帝头像"
+                class="header-avatar"
+              />
+              <UserOutlined v-else />
               <span class="username">{{ userRole === 'emperor' ? '皇帝' : '大臣' }}</span>
             </a>
             <template #overlay>
@@ -130,6 +136,13 @@ const handleLogout = () => {
 
 .username {
   margin-left: 8px;
+}
+
+.header-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 4px;
 }
 
 .content {
